@@ -1,0 +1,23 @@
+{
+  "name": "openweather-api",
+  "version": "1.0.0",
+  "description": "Ze Delivery Challenge QA - Teste de automação de API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raquelcassia/openweather-api.git"
+  },
+  "author": "Raquel de Cássia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raquelcassia/openweather-api/issues"
+  },
+  "homepage": "https://github.com/raquelcassia/openweather-api#readme",
+  "devDependencies": {
+    "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.1.4"
+  }
+}
