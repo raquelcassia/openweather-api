@@ -4,7 +4,12 @@
 name: Node.js Package
 
 on:
-  types: [created]
+  pull request: null
+  push:
+    branches:
+      - main
+  workflow_dispatch: null
+
 
 jobs:
   build:
