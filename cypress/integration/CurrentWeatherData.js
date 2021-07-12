@@ -2,7 +2,6 @@
 
 //Steps de Teste de Dados meteorológicos atuais
 
-const baseurl_DadosAtuais = "https://api.openweathermap.org/data/2.5/"
 
 // API_KEY
 
@@ -10,7 +9,7 @@ const baseurl_DadosAtuais = "https://api.openweathermap.org/data/2.5/"
     it("GET -READ", () => {
         cy.request({
             method: "GET",
-            url: baseurl_DadosAtuais + "weather?q=Inexistente&appid=ebd69e528d958b2666b3d73a19cedcbc",
+            url: "weather?q=Inexistente&appid=ebd69e528d958b2666b3d73a19cedcbc",
             failOnStatusCode: false
         }).then((response) => {
             cy.log(JSON.stringify(response.body));
@@ -25,7 +24,7 @@ const baseurl_DadosAtuais = "https://api.openweathermap.org/data/2.5/"
 
 describe("Pesquisa Por Nome de Cidade Válida", () => {
     it("GET -READ", () => {
-        cy.request("GET", baseurl_DadosAtuais + "weather?q=London&appid="
+        cy.request("GET", "weather?q=London&appid="
             + Cypress.env("API_KEY")).then((response) => {
 
                 cy.log(JSON.stringify(response.body));
@@ -42,7 +41,7 @@ describe("Pesquisa Por Nome de Cidade Válida", () => {
     it("GET -READ", () => {
         cy.request({
             method: "GET", 
-            url: baseurl_DadosAtuais + "weather?q=Inexistente&appid="
+            url: "weather?q=Inexistente&appid="
             + Cypress.env("API_KEY"), 
             failOnStatusCode: false}) .then((response) => {
 
@@ -60,7 +59,7 @@ describe("Pesquisa Por Nome de Cidade Válida", () => {
 
 describe("Pesquisa de Cidade Por ID Válido", () => {
     it("GET -READ", () => {
-        cy.request("GET", baseurl_DadosAtuais + "weather?id=1850147&appid="
+        cy.request("GET", "api.openweathermap.org/data/2.5/weather?id=1850147&appid="
             + Cypress.env("API_KEY")).then((response) => {
 
                 cy.log(JSON.stringify(response.body));
@@ -77,7 +76,7 @@ describe("Pesquisa de Cidade Por ID Válido", () => {
     it("GET -READ", () => {
         cy.request({
             method: "GET",
-            url: baseurl_DadosAtuais + "weather?q=Inexistente&appid="
+            url: "weather?q=Inexistente&appid="
                 + Cypress.env("API_KEY"),
             failOnStatusCode: false
         }).then((response) => {
@@ -94,7 +93,7 @@ describe("Pesquisa de Cidade Por ID Válido", () => {
 
 describe("Pesquisa de Cidade Por Coordenadas Geográficas Válidas", () => {
     it("GET -READ", () => {
-        cy.request("GET", baseurl_DadosAtuais + "weather?lat=35&lon=139&appid="
+        cy.request("GET", "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid="
             + Cypress.env("API_KEY")).then((response) => {
 
                 cy.log(JSON.stringify(response.body));
@@ -112,7 +111,7 @@ describe("Pesquisa de Cidade Por Coordenadas Geográficas Válidas", () => {
     it("GET -READ", () => {
         cy.request({
             method: "GET",
-            url: baseurl_DadosAtuais + "weather?q=Inexistente&appid="
+            url: "weather?q=Inexistente&appid="
                 + Cypress.env("API_KEY"),
             failOnStatusCode: false
         }).then((response) => {
@@ -128,7 +127,7 @@ describe("Pesquisa de Cidade Por Coordenadas Geográficas Válidas", () => {
 
 describe("Pesquisa de Cidade Por Zip Code Válido", () => {
     it("GET -READ", () => {
-        cy.request("GET", baseurl_DadosAtuais + "weather?zip=19382,us&appid="
+        cy.request("GET", "https://api.openweathermap.org/data/2.5/weather?zip=19382,us&appid="
             + Cypress.env("API_KEY")).then((response) => {
 
                 cy.log(JSON.stringify(response.body));
@@ -144,7 +143,7 @@ describe("Pesquisa de Cidade Por Zip Code Inválido", () => {
     it("GET -READ", () => {
         cy.request({
             method: "GET",
-            url: baseurl_DadosAtuais + "weather?q=Inexistente&appid="
+            url: "weather?q=Inexistente&appid="
                 + Cypress.env("API_KEY"),
             failOnStatusCode: false
         }).then((response) => {
