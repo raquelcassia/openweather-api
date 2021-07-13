@@ -1,5 +1,5 @@
 # [Zé Delivery]  QA Challenge
->Desafio de Testes de [Open Weather API](https://openweathermap.org/api) 
+>Desafio de Testes de Api com [Open Weather Map](https://openweathermap.org/api) 
 ---
 
 ### 1. Identificar fluxos críticos / 2. Teste de automação de IU
@@ -12,7 +12,7 @@
 ### 3. Teste de automação de API
 
 
-Repositório com o desafio técnico de testes automatizados para o site [Open Weather Map](https://openweathermap.org/current) utilizando:
+ Repositório com o desafio técnico de testes automatizados para o site [Open Weather Map](https://openweathermap.org/current) utilizando:
 
 
   - JavaScript
@@ -43,10 +43,11 @@ Repositório com o desafio técnico de testes automatizados para o site [Open We
 
 ### Instalação
 
-> Clonar projeto
+>######  Clonar projeto
 - Clonar este repositório usando _ssh_ ou _https_.
 
-> exemplo:
+>###### Exemplo:
+
 ```js
 $ git clone https://github.com/raquelcassia/openweather-api.git
 ```
@@ -71,13 +72,13 @@ $ npm install
 }
 ```
 
-**Nota Importante:** Isso foi feito para simular uma possível _"não exposição"_ para o tratamento quanto a dados sensíveis. 
+:pushpin: **Nota Importante:** Isso foi feito para simular uma possível _"não exposição"_ para o tratamento quanto a dados sensíveis. 
 
 -----------------------
 
 ### Como testar
 
-> Para rodar os testes no modo interativo do cypress:
+>###### Para rodar os testes no modo interativo do cypress, abra o terminal em sua IDE e utilize o comando:
 ```js
 $ npx cypress open
 ```
@@ -86,7 +87,7 @@ $ npx cypress open
 
 ### Documentações
 
-Para documentação de palavras-chave individuais, consulte o seguinte:
+:pushpin: Para documentação de palavras-chave individuais, consulte o seguinte:
 
  - [Documentação Cypress](https://docs.cypress.io/guides/overview/why-cypress)
  - [Documentação API](https://openweathermap.org/current)
